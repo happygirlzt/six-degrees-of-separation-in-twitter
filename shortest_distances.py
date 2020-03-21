@@ -13,7 +13,9 @@ from networkx.algorithms import community
 import matplotlib.pyplot as plt
 
 ################ Read Graph and nodes ####################
+print('Starting Reading the graph...')
 G=nx.read_gpickle('./data/test.gpickle')
+print('Finished Reading')
 node_list=[line.rstrip('\n') for line in open('./data/nodelist.txt')]
 
 ############### Calculate the shortest paths #############
@@ -30,6 +32,8 @@ print('Finished sampling')
 #remain_nodes=list(set(node_list)-set(k_nodes))
 
 count=1
+pairs_count=0
+
 for a in k_nodes:
   no_paths=[]
   shortest_path_list=[]
