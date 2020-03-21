@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 ################ Read Graph and nodes ####################
 print('Starting Reading the graph...')
-G=nx.read_gpickle('./data/test.gpickle')
+G=nx.read_gpickle('test.gpickle')
 
 print('Finished Reading')
 
@@ -51,7 +51,7 @@ for a in k_nodes:
     pairs_count+=1
 
     try:
-      s_path=nx.shortest_path(G,a,b)
+      s_path=nx.shortest_path_length(G,a,b)
       shortest_path_list.append((a,b,s_path))
       shortest_dist.append(s_path)
 
