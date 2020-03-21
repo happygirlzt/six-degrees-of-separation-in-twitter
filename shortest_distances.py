@@ -20,14 +20,14 @@ node_list=[line.rstrip('\n') for line in open('./data/nodelist.txt')]
 
 ############### Calculate the shortest paths #############
 
-k=5000
+k=1000
 k_nodes=[]
 
 for i in range(k):
   n1=random.choice(node_list)
   k_nodes.append(n1)
 
-print('Finished sampling')
+print('Finished sampling {} nodes'.format(k))
 
 #remain_nodes=list(set(node_list)-set(k_nodes))
 
@@ -46,20 +46,20 @@ for a in k_nodes:
     pairs_count+=1
 
     try:
-      s_path=nx.shortest_path(G,a,b)
+      s_paths=nx.shortest_path(G,a,b)
       shortest_path_list.append((a,b,s_path))
       shortest_dist.append(s_path)
 
     except:
       no_path.append((a,b))
 
-  with open('shortest_path.txt','a+') as fp:
+  with open('./data/shortest_path.txt','a+') as fp:
       fp.write('\n'.join('%s %s %s'%x for x in shortest_path_list))
 
-  with open('no_path.txt','a+') as fp:
-      fp.write('\n'.join('%s %s'%x for x in no_path))
+  with open('./data/no_path.txt','a+') as fp:
+      fp.write('\n'.join('%s %s'%x for x in no_paths))
 
-  with open('shortest_dist.txt','a+') as fp:
+  with open('./data/shortest_dist.txt','a+') as fp:
       fp.write('\n'.join('%s'%x for x in shortest_dist))
 
   print('Finished {} node'.format(count))
