@@ -13,8 +13,8 @@ from networkx.algorithms import community
 import matplotlib.pyplot as plt
 
 ################ Read Graph and nodes ####################
-G=nx.read_gpickle('/data/test.gpickle')
-node_list=[line.rstrip('\n') for line in open('/data/nodelist.txt')]
+G=nx.read_gpickle('./data/test.gpickle')
+node_list=[line.rstrip('\n') for line in open('./data/nodelist.txt')]
 
 ############### Calculate the shortest paths #############
 
@@ -27,15 +27,18 @@ for i in range(k):
 
 print('Finished sampling')
 
-remain_nodes=list(set(node_list)-set(k_nodes))
+#remain_nodes=list(set(node_list)-set(k_nodes))
 
-no_path=[]
-shortest_path_list=[]
-shortest_dist=[]
-pairs_count=0
-
+count=1
 for a in k_nodes:
-  for b in remain_nodes:
+  no_paths=[]
+  shortest_path_list=[]
+  shortest_dist=[]
+
+  for b in k_nodes:
+    if a == b:
+      continue
+
     pairs_count+=1
 
     try:
@@ -45,3 +48,15 @@ for a in k_nodes:
 
     except:
       no_path.append((a,b))
+
+  with open('shortest_path.txt','a+') as fp:
+      fp.write('\n'.join('%s %s %s'%x for x in shortest_path_list))
+
+  with open('no_path.txt','a+') as fp:
+      fp.write('\n'.join('%s %s'%x for x in no_path))
+
+  with open('shortest_dist.txt','a+') as fp:
+      fp.write('\n'.join('%s'%x for x in shortest_dist))
+
+  print('Finished {} node'.format(count))
+  count+=1
