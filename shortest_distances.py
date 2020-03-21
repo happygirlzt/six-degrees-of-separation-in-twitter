@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import ast
 import csv
 import time
 import re
@@ -15,12 +14,18 @@ import matplotlib.pyplot as plt
 ################ Read Graph and nodes ####################
 print('Starting Reading the graph...')
 G=nx.read_gpickle('./data/test.gpickle')
+
 print('Finished Reading')
+
+## Edge list :https://drive.google.com/file/d/1hq-7hOgGZzkEPhxphy4u6ZiMnEJDhLkQ/view?usp=sharing
+
+## Graph: https://drive.google.com/file/d/1tWQljCNCyV01DQrK3tGHlogCiAEqgXI9/view?usp=sharing
+
 node_list=[line.rstrip('\n') for line in open('./data/nodelist.txt')]
 
 ############### Calculate the shortest paths #############
 
-k=1000
+k=5000
 k_nodes=[]
 
 for i in range(k):
@@ -53,13 +58,13 @@ for a in k_nodes:
     except:
       no_paths.append((a,b))
 
-  with open('./data/shortest_path.txt','a+') as fp:
+  with open('./data/%s_shortest_path.txt'%k,'a+') as fp:
       fp.write('\n'.join('%s %s %s'%x for x in shortest_path_list))
 
-  with open('./data/no_path.txt','a+') as fp:
+  with open('./data/%s_no_path.txt'%k,'a+') as fp:
       fp.write('\n'.join('%s %s'%x for x in no_paths))
 
-  with open('./data/shortest_dist.txt','a+') as fp:
+  with open('./data/%s_shortest_dist.txt'%k,'a+') as fp:
       fp.write('\n'.join('%s'%x for x in shortest_dist))
 
   print('Finished {} node'.format(count))
