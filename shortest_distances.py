@@ -46,12 +46,12 @@ for a in k_nodes:
     pairs_count+=1
 
     try:
-      s_paths=nx.shortest_path(G,a,b)
+      s_path=nx.shortest_path(G,a,b)
       shortest_path_list.append((a,b,s_path))
       shortest_dist.append(s_path)
 
     except:
-      no_path.append((a,b))
+      no_paths.append((a,b))
 
   with open('./data/shortest_path.txt','a+') as fp:
       fp.write('\n'.join('%s %s %s'%x for x in shortest_path_list))
