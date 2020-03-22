@@ -21,7 +21,6 @@ print('Finished Reading')
 
 ## Graph: https://drive.google.com/file/d/1tWQljCNCyV01DQrK3tGHlogCiAEqgXI9/view?usp=sharing
 
-
 ## Node list: https://drive.google.com/file/d/1-w1v0e3RxvocZPJpOZOXUKpOI5xschwN/view?usp=sharing
 
 node_list=[line.rstrip('\n') for line in open('./data/nodelist.txt')]
@@ -65,11 +64,20 @@ for index_a in range(k):
   with open('./data/real_%s_shortest_path.txt'%k,'a+') as fp:
       fp.write('\n'.join('%s %s %s'%x for x in shortest_path_list))
 
+  with open('./data/real_%s_shortest_path.txt'%k,'a+') as fp:
+      fp.write('\n')
+
   with open('./data/real_%s_no_path.txt'%k,'a+') as fp:
       fp.write('\n'.join('%s %s'%x for x in no_paths))
 
+  with open('./data/read_%s_no_path.txt'%k,'a+') as fp:
+      fp.write('\n')
+
   with open('./data/real_%s_shortest_dist.txt'%k,'a+') as fp:
       fp.write('\n'.join('%s'%x for x in shortest_dist))
+
+  with open('./data/real_%s_shortest_dist.txt'%k,'a+') as fp:
+      fp.write('\n')
 
   print('Finished {} node'.format(count))
   count+=1
