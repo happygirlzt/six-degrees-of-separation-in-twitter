@@ -13,7 +13,10 @@ import matplotlib.pyplot as plt
 
 ################ Read Graph and nodes ####################
 print('Starting Reading the graph...')
-G=nx.read_gpickle('./data/test.gpickle')
+
+### Please download the graph model from 
+### https://drive.google.com/file/d/1tWQljCNCyV01DQrK3tGHlogCiAEqgXI9/view?usp=sharing
+G=nx.read_gpickle('./your_data_folder/test.gpicklse')
 print('Finished Reading')
 
 ################ Generate Tags ##########################

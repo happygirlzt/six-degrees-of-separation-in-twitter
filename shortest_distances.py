@@ -21,7 +21,10 @@ print('Finished Reading')
 
 ## Graph: https://drive.google.com/file/d/1tWQljCNCyV01DQrK3tGHlogCiAEqgXI9/view?usp=sharing
 
-node_list=[line.rstrip('\n') for line in open('./data/nodelist.txt')]
+
+## Node list: https://drive.google.com/file/d/1-w1v0e3RxvocZPJpOZOXUKpOI5xschwN/view?usp=sharing
+
+node_list=[line.rstrip('\n') for line in open('./your_data_folder/nodelist.txt')]
 
 ############### Calculate the shortest paths #############
 
@@ -33,8 +36,6 @@ for i in range(k):
   k_nodes.append(n1)
 
 print('Finished sampling {} nodes'.format(k))
-
-#remain_nodes=list(set(node_list)-set(k_nodes))
 
 count=1
 pairs_count=0
