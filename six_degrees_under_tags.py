@@ -16,7 +16,7 @@ print('Starting Reading the graph...')
 
 ### Please download the graph model from 
 ### https://drive.google.com/file/d/1tWQljCNCyV01DQrK3tGHlogCiAEqgXI9/view?usp=sharing
-G=nx.read_gpickle('./your_data_folder/test.gpicklse')
+G=nx.read_gpickle('./your_data_folder/test.gpickle')
 print('Finished Reading')
 
 ################ Generate Tags ##########################
@@ -31,7 +31,10 @@ def hasMoreTags(s):
     return s[-1]!=']'
 
 start=time.time()
-with open('./data/data.csv', 'r') as infile:
+######### Please download the data file from:
+#### https://www.kaggle.com/hwassner/TwitterFriends
+
+with open('./your_data_folder/data.csv', 'r') as infile:
     reader = csv.reader(infile)
     count=-1
     
