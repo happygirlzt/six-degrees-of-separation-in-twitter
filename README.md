@@ -62,7 +62,7 @@ TBA
 |7|1|
 
 The total pairs calculated is 19900\
-The average degree is 2.7214070351758792\
+The average degree is 2.7214070351758792
 
 ### Top 2 used tag: respecttylerjoseph
 |Shortest Distance|Pair Count|
@@ -74,7 +74,7 @@ The average degree is 2.7214070351758792\
 |5|3|
 
 The total pairs calculated is 19900\
-The average degree is 2.056884422110553\
+The average degree is 2.056884422110553
 
 ### Top 3 used tag: gloryoutnow
 |Shortest Distance|Pair Count|
@@ -85,7 +85,7 @@ The average degree is 2.056884422110553\
 |4|182|
 
 The total pairs calculated is 19900\
-The average degree is 2.033366834170854\
+The average degree is 2.033366834170854
 
 
 ### Top 4 used tag: backtohogwarts
@@ -99,7 +99,7 @@ The average degree is 2.033366834170854\
 |6|1|
 
 The total pairs calculated is 19900\
-The average degree is 2.430854271356784\
+The average degree is 2.430854271356784
 
 ### Top 5 used tag: 
 |Shortest Distance|Pair Count|
@@ -113,4 +113,4 @@ The average degree is 2.430854271356784\
 |7|4|
 
 The total pairs calculated is 19900\
-The average degree is 2.7337688442211054\
+The average degree is 2.7337688442211054
