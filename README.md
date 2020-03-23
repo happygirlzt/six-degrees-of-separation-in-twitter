@@ -47,8 +47,19 @@ We sampled 200 users from each tag and calculated their shortest distances.
 We could conclude that the Six Degrees of Separation still holds in Twitter. Even in a smaller context, which means to calculate the shortest paths under the same tag.
 
 ## Without specific tags
-TBA
+|Shortest Distance|Pair Count|
+|--|--|
+|2|    5980016|
+|3|    4624087|
+|4|    1835945|
+|5|      52419|
+|6|       2967|
+|1|       1823|
+|7|        238|
+|8|          5|
 
+The number of the total pairs calculated is 12497500 (= 5000 * 4999 / 2) \
+The average degree is 2.677295
 
 ## With specific tags
 ### Top 1 used tag: nationaldogday
@@ -61,8 +72,8 @@ TBA
 |6|47|
 |7|1|
 
-The total pairs calculated is 19900\
-The average degree is 2.7214070351758792
+The number of the total pairs calculated is 19900 (= 200 * 199 / 2)\
+The average degree is 2.7214070351758792 \
 
 ### Top 2 used tag: respecttylerjoseph
 |Shortest Distance|Pair Count|
@@ -73,8 +84,8 @@ The average degree is 2.7214070351758792
 |4|33|
 |5|3|
 
-The total pairs calculated is 19900\
-The average degree is 2.056884422110553
+The number of the total pairs calculated is 19900 (= 200 * 199 / 2) \
+The average degree is 2.056884422110553 \
 
 ### Top 3 used tag: gloryoutnow
 |Shortest Distance|Pair Count|
@@ -84,9 +95,8 @@ The average degree is 2.056884422110553
 |1|239|
 |4|182|
 
-The total pairs calculated is 19900\
-The average degree is 2.033366834170854
-
+The number of the total pairs calculated is 19900 (= 200 * 199 / 2) \
+The average degree is 2.033366834170854 \
 
 ### Top 4 used tag: backtohogwarts
 |Shortest Distance|Pair Count|
@@ -98,8 +108,8 @@ The average degree is 2.033366834170854
 |1|7|
 |6|1|
 
-The total pairs calculated is 19900\
-The average degree is 2.430854271356784
+The number of the total pairs calculated is 19900 (= 200 * 199 / 2) \
+The average degree is 2.430854271356784 \
 
 ### Top 5 used tag: 
 |Shortest Distance|Pair Count|
@@ -112,5 +122,5 @@ The average degree is 2.430854271356784
 |1|14|
 |7|4|
 
-The total pairs calculated is 19900\
-The average degree is 2.7337688442211054
+The number of the total pairs calculated is 19900 (= 200 * 199 / 2) \
+The average degree is 2.7337688442211054 \
