@@ -22,8 +22,9 @@ The dataset is screwed, such as different users has different numbers of friends
 Actually, there are 40000 users in the given dataset. The reason why in total there are 12891798 users is that we treat each user's mentioned friend as a node too. For example, if user 1 has 600 friends, we treat all 600 friends are nodes.
 
 ## Calculating the shortest distancs
-### Without specific tags, sampled 5000 users
-We sampled 5000 users from 40000 users. And calculated the shortest distances from each user to all other 4999 users.
+### Without specific tags, sampled 5,000 and 10,000 users respectively
+We sampled 5,000 users from 40,000 users. And calculated the shortest distances from each user to all other 4,999 users.
+Furthermore, we sampled 10,000 users from 40,000 users and calculated the shortest distances from each user to all the rest 9,999 users.
 
 ### With specific tags, sampled 200 users for each tag
 We found that the top 10 mentioned tags were as follows:
@@ -47,20 +48,35 @@ We sampled 200 users from each tag and calculated their shortest distances.
 We could conclude that the Six Degrees of Separation still holds in Twitter. Even in a smaller context, which means to calculate the shortest paths under the same tag.
 
 ## Without specific tags
+### 5,000 users
 |Shortest Distance|Pair Count|
 |--|--|
-|2|    5980016|
-|3|    4624087|
-|4|    1835945|
-|5|      52419|
-|6|       2967|
-|1|       1823|
+|2|    5,980,016|
+|3|    4,624,087|
+|4|    1,835,945|
+|5|      52,419|
+|6|       2,967|
+|1|       1,823|
 |7|        238|
 |8|          5|
 
-The number of the total pairs calculated is 12497500 (= 5000 * 4999 / 2) \
+The number of the total pairs calculated is 12,497,500 (= 5000 * 4999 / 2) \
 The average degree is 2.677295
 
+### 10,000 users
+|Shortest Distance|Pair Count|
+|--|--|
+|2|    24,351,527|
+|3|    18,510,936|
+|4|     6,891,586|
+|5|      216,859|
+|6|       13,818|
+|1|        9,391|
+|7|         850|
+|8|          33|
+
+The number of the total pairs calcualted is 49,995,000 (=10000 * 9999 / 2) \
+The average degree is 2.659966
 ## With specific tags
 ### Top 1 used tag: nationaldogday
 |Shortest Distance| Pair Count|
@@ -73,7 +89,7 @@ The average degree is 2.677295
 |7|1|
 
 The number of the total pairs calculated is 19900 (= 200 * 199 / 2)\
-The average degree is 2.7214070351758792 \
+The average degree is 2.7214070351758792
 
 ### Top 2 used tag: respecttylerjoseph
 |Shortest Distance|Pair Count|
@@ -85,7 +101,7 @@ The average degree is 2.7214070351758792 \
 |5|3|
 
 The number of the total pairs calculated is 19900 (= 200 * 199 / 2) \
-The average degree is 2.056884422110553 \
+The average degree is 2.056884422110553
 
 ### Top 3 used tag: gloryoutnow
 |Shortest Distance|Pair Count|
@@ -96,7 +112,7 @@ The average degree is 2.056884422110553 \
 |4|182|
 
 The number of the total pairs calculated is 19900 (= 200 * 199 / 2) \
-The average degree is 2.033366834170854 \
+The average degree is 2.033366834170854
 
 ### Top 4 used tag: backtohogwarts
 |Shortest Distance|Pair Count|
@@ -109,7 +125,7 @@ The average degree is 2.033366834170854 \
 |6|1|
 
 The number of the total pairs calculated is 19900 (= 200 * 199 / 2) \
-The average degree is 2.430854271356784 \
+The average degree is 2.430854271356784
 
 ### Top 5 used tag: 
 |Shortest Distance|Pair Count|
@@ -123,4 +139,4 @@ The average degree is 2.430854271356784 \
 |7|4|
 
 The number of the total pairs calculated is 19900 (= 200 * 199 / 2) \
-The average degree is 2.7337688442211054 \
+The average degree is 2.7337688442211054
