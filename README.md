@@ -1,5 +1,5 @@
 This project is aimed to find whether the Six Degrees of Separation still holds in Twitter in two dimensions:
-1. Ramdomly sample 5000 users without consider common tags.
+1. Ramdomly sample 5,000 and 10,000 users without consider common tags.
 2. Randomly sample 200 users under the top 5 mentioned tags in the dataset.
 
 # Six Degrees of Separation
@@ -15,11 +15,11 @@ The dataset is screwed, such as different users has different numbers of friends
 2. user_tags: A user and his used tags
 3. tag_users: A tag and its corresponding users. By this dictionary, we could find the top used tags in this dataset.
 ### Summary of this graph
-- Number of nodes: 12891798
-- Number of edges: 32842959
+- Number of nodes: 12,891,798
+- Number of edges: 32,842,959
 - Average degree:   5.0952
 
-Actually, there are 40000 users in the given dataset. The reason why in total there are 12891798 users is that we treat each user's mentioned friend as a node too. For example, if user 1 has 600 friends, we treat all 600 friends are nodes.
+Actually, there are 40,000 users in the given dataset. The reason why in total there are 12,891,798 users is that we treat each user's mentioned friend as a node too. For example, if user 1 has 600 friends, we treat all 600 friends are nodes.
 
 ## Calculating the shortest distancs
 ### Without specific tags, sampled 5,000 and 10,000 users respectively
@@ -45,7 +45,7 @@ We found that the top 10 mentioned tags were as follows:
 We sampled 200 users from each tag and calculated their shortest distances.
 
 # Result
-We could conclude that the Six Degrees of Separation still holds in Twitter. Even in a smaller context, which means to calculate the shortest paths under the same tag.
+We could conclude that Six Degrees of Separation still holds in Twitter. Even in a smaller context, which means to calculate the shortest paths under the same tag.
 
 ## Without specific tags
 ### 5,000 users
